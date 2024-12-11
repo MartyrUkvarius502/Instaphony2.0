@@ -2,13 +2,13 @@ import { createTheme } from '@mui/material/styles';
 // Define the light theme palette
 const lightPalette = {
   primary: {
-    main: '#1976d2', // blue
+    main: '#b07ac2', 
   },
   secondary: {
-    main: '#dc004e', // pink
+    main: '#3d6fff',
   },
   background: {
-    default: '#fafafa', // light background
+    default: '#f8ffeb', // light background
     paper: '#ffffff', // paper background
   },
   text: {
