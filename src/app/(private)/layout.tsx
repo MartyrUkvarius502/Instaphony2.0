@@ -8,7 +8,7 @@ import AuthGuard from "@/components/AuthGuard";
 import Box from "@mui/material/Box";
 
 // Metadata for the layout
-export const metadata = { title: "Protected | SnapZoška" };
+export const metadata = { title: "Protected | Instaphony" };
 
 // PrivateLayout Component
 const PrivateLayout = ({ children }: { children: React.ReactNode }) => (

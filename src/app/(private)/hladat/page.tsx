@@ -3,7 +3,7 @@
 // Custom imports
 import SearchView from "@/views/private/SearchView"
 
-export const metadata = { title: "Hľadať | ZoškaSnap" };
+export const metadata = { title: "Hľadať | Instaphony" };
 
 // Search Page
 const SearchPage = () => <SearchView />;

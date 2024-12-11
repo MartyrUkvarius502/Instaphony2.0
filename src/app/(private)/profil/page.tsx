@@ -3,7 +3,7 @@
 
 import Typography from "@mui/material/Typography";
 
-export const metadata = { title: "Zoznam profilov | ZoškaSnap" };
+export const metadata = { title: "Zoznam profilov | Instaphony" };
 
 export default function ProfileList() {
 
