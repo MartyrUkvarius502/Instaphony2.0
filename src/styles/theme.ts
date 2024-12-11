@@ -1,55 +1,48 @@
-// src/styles/theme.ts
-
 import { createTheme } from '@mui/material/styles';
-
-// Base theme shared across modes
-const baseTheme = {
-  typography: {
-    fontFamily: 'Roboto, Arial, sans-serif',
-    h1: {
-      fontSize: '2rem',
-      fontWeight: 700,
-    },
-    body1: {
-      fontSize: '1rem',
-    },
+// Define the light theme palette
+const lightPalette = {
+  primary: {
+    main: '#1976d2', // blue
+  },
+  secondary: {
+    main: '#dc004e', // pink
+  },
+  background: {
+    default: '#fafafa', // light background
+    paper: '#ffffff', // paper background
+  },
+  text: {
+    primary: '#000000', // black text
+    secondary: '#555555', // gray text
   },
 };
-
-// Light theme
-const lightTheme = createTheme({
-  ...baseTheme,
+// Define the dark theme palette (slightly lighter dark colors)
+const darkPalette = {
+  primary: {
+    main: '#90caf9', // light blue
+  },
+  secondary: {
+    main: '#f50057', // pink
+  },
+  background: {
+    default: '#1a1a1a', // slightly lighter than #121212
+    paper: '#2c2c2c', // lighter paper background
+  },
+  text: {
+    primary: '#e0e0e0', // light white text (instead of pure white)
+    secondary: '#a0a0a0', // lighter gray text
+  },
+};
+// Create the theme
+export const lightTheme = createTheme({
   palette: {
-    mode: 'light',
-    primary: { main: '#dc004e' }, // Red
-    secondary: { main: '#1976d2' }, // Blue
-    background: {
-      default: '#f4f6f8', // Light gray
-      paper: '#ffffff', // White
-    },
-    text: {
-      primary: '#000000', // Black text in light mode
-      secondary: '#555555', // Gray for secondary text
-    },
+    mode: 'light', // Set the mode to 'light'
+    ...lightPalette, // Add light palette colors
   },
 });
-
-// Dark theme
-const darkTheme = createTheme({
-  ...baseTheme,
+export const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
-    primary: { main: '#f44336' }, // Darker red
-    secondary: { main: '#2196f3' }, // Lighter blue
-    background: {
-      default: '#121212', // Dark background
-      paper: '#1e1e1e', // Dark paper
-    },
-    text: {
-      primary: '#ffffff', // White text in dark mode
-      secondary: '#aaaaaa', // Light gray for secondary text
-    },
+    mode: 'dark', // Set the mode to 'dark'
+    ...darkPalette, // Add dark palette colors
   },
 });
-
-export { lightTheme, darkTheme };

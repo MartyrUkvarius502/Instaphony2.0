@@ -3,12 +3,13 @@
 import { Metadata } from "next";
 import "./globals.css";
 
-import ThemeProvider from "@/providers/ThemeProvider";
-import AuthProvider from "../providers/AuthProvider";
+import AuthProvider from "../components/AuthProvider";
 import Navbar from "../components/NavBar";
 
+import ThemeProvider from "../components/ThemeProvider"; // Import the ThemeProvider
+
 export const metadata: Metadata = {
-  title: "SnapZoška",
+  title: "Instaphony",
   description: "Created by students of SPŠE Zochova 9, Bratislava",
 };
 
@@ -22,10 +23,12 @@ export default function RootLayout({
       <body>
         <AuthProvider>
           <ThemeProvider>
-            <main >
-              {children}
-            </main>
-            <Navbar />
+            <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+              <main style={{ flexGrow: 1 }}>
+                {children} {/* Render child layouts or pages */}
+              </main>
+            </div>
+            <Navbar /> {/* Display Navbar at the bottom of every page */}
           </ThemeProvider>
         </AuthProvider>
       </body>
