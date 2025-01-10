@@ -1,18 +1,11 @@
-// src/views/auth/SignVerifyView.tsx
+// src/sections/SignVerifyView.tsx
 
 "use client";
 
-// React imports
 import { useState } from "react";
+import { Container, TextField, Typography, Button } from "@mui/material";
 
-// MUI imports
-import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-
-
-// SignVerify View Component
-const SignVerifyView = () => {
+export default function SignVerifyView() {
   const [verificationCode, setVerificationCode] = useState<string>("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,7 +21,19 @@ const SignVerifyView = () => {
   };
 
   return (
-    <>
+    <Container
+      maxWidth="xs"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        mt: 5,
+        p: 3,
+        bgcolor: "background.paper",
+        boxShadow: 3,
+        borderRadius: 2,
+      }}
+    >
       {/* Title */}
       <Typography variant="h5" sx={{ mb: 3 }}>
         Overte svoj účet
@@ -54,8 +59,6 @@ const SignVerifyView = () => {
       <Button variant="contained" onClick={handleVerify} fullWidth>
         Overiť
       </Button>
-    </>
+    </Container>
   );
-};
-
-export default SignVerifyView;
+}

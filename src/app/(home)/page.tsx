@@ -1,32 +1,18 @@
 // src/app/(home)/page.tsx
 
-// Next.js imports
-import { redirect } from "next/navigation";
+import Typography from "@mui/material/Typography";
 
-// NextAuth imports
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/authOptions";
+export const metadata = { title: "Domov  | Instaphony " }
 
-// Custom imports
-import NonAuthHomeView from "@/views/home/HomeNonAuthView";
+export default function Home() {
 
-export const metadata = { title: "Domov | Instaphony" };
+  return (
 
-// HomePage Component
-const HomePage = async () => {
-  // Fetch session on the server
-  const session = await getServerSession(authOptions);
+  <Typography> This is the home page. Welcome welcome. </Typography>
 
-  if (session) {
-    // Redirect authenticated users to the feed page
-    redirect("/prispevok");
-  }
+  );
+}
 
-  // Render the unauthenticated home view for non-authenticated users
-  return <NonAuthHomeView />;
-};
-
-export default HomePage;
 
 
 

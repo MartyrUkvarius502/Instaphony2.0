@@ -1,11 +1,15 @@
 // src/app/hladat/page.tsx
 
-// Custom imports
-import SearchView from "@/views/private/SearchView"
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
 
 export const metadata = { title: "Hľadať | Instaphony" };
 
-// Search Page
-const SearchPage = () => <SearchView />;
+export default function Search() {
 
-export default SearchPage;
+    return (
+      <Container>
+          <Typography> Search profiles </Typography>
+      </Container>
+    );
+  }
