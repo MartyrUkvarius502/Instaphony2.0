@@ -17,11 +17,17 @@ node -v
 npm -v
 mkdir dev
 cd dev/
-git clone https://github.com/sille-zoska/snap-zoska-4h.git
-File -> Open folder -> dev -> snap-zoska-4h -> OK
-menopriezvisko@DESKTOP-XYZ:~/dev/snap-zoska-4h$
-git config user.name "sille-zoska"
-git config user.email "sille@zochova.sk"
+git clone <link to your repo>
+File -> Open folder -> dev -> <your repo name> -> OK
+menopriezvisko@DESKTOP-XYZ:~/xxx/xxxxxx.git
+git config user.name ""
+git config user.email ""
 git remote -v
 npm install
 urobte zmenu (novy riadok) v niektorej page.tsx: commit, sync
+
+# Git and Github:
+https://www.youtube.com/watch?v=mJ-qvsxPHpY
+
+# Next.js:
+https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI
