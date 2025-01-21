@@ -4,12 +4,11 @@ import {
   Button,
   Container,
   Typography,
-  Checkbox,
-  FormControlLabel,
-} from "@mui/material";
-import { signIn } from "next-auth/react";
+} 
+from "@mui/material";
+import { signIn } from "next-auth/react"
 import GoogleIcon from "@mui/icons-material/Google";
-import GithubIcon from "@mui/icons-material/Github";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function SignInView() {
   return (
@@ -51,7 +50,7 @@ export default function SignInView() {
       <Button
         variant="outlined"
         fullWidth
-        startIcon={<GithubIcon />}
+        startIcon={<GitHubIcon />}
         onClick={() => signIn("github")}
         sx={{ mb: 1 }}
       >

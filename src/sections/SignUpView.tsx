@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { signIn } from "next-auth/react";
 import GoogleIcon from "@mui/icons-material/Google";
-import GithubIcon from "@mui/icons-material/Github";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -83,7 +83,7 @@ export default function SignUpView() {
       <Button
         variant="outlined"
         fullWidth
-        startIcon={<GithubIcon />}
+        startIcon={<GitHubIcon />}
         onClick={() => signIn("github")}
         disabled={!gdprAccepted}
         sx={{ mb: 1 }}
