@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 // Define the light theme palette
 const lightPalette = {
   primary: {
