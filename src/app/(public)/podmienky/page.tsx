@@ -1,12 +1,15 @@
 // src/app/podmienky/page.tsx
 
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
 
-// Project imports
-import TermsConditionsView from "@/views/public/TermsConditionsView";
+export const metadata = { title: "Podmienky | Instaphony" }
 
-export const metadata = { title: "Podmienky používania | ZoškaSnap" };
+export default function TermsConditions() {
 
-// Terms and Conditions Page Component
-const TermsConditionsPage = () => <TermsConditionsView />;
-
-export default TermsConditionsPage;
+  return (
+    <Container>
+        <Typography> Our terms and conditions </Typography>
+    </Container>
+  );
+}

@@ -1,12 +1,17 @@
 // src/app/(public)/gdpr/page.tsx
 
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
 
-// Project imports
-import GDPRView from "@/views/public/GDPRView";
+export const metadata = { title: "GDPR | Instaphony" };
 
-export const metadata = { title: "GDPR | ZoškaSnap" };
 
-// GDPR Page Component
-const GDPRPage = () => <GDPRView />;
-
-export default GDPRPage;
+export default function GDPR() {
+    
+    return (
+        <Container>
+            <Typography> BAHABHABHA </Typography>
+        </Container>
+    );
+    
+}

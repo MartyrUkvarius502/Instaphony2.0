@@ -1,23 +1,14 @@
 // src/app/layout.tsx
+"use client";
 
-import { Metadata } from "next";
 import "./globals.css";
-
 import AuthProvider from "../components/AuthProvider";
 import Navbar from "../components/NavBar";
-
-import ThemeProvider from "../components/ThemeProvider"; // Import the ThemeProvider
-
-export const metadata: Metadata = {
-  title: "Instaphony",
-  description: "Created by students of SPŠE Zochova 9, Bratislava",
-};
+import ThemeProvider from "../components/ThemeProvider";
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="sk">
       <body>
@@ -25,11 +16,11 @@ export default function RootLayout({
           <ThemeProvider>
             <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
               <main style={{ flexGrow: 1 }}>
-                {children} {/* Render child layouts or pages */}
+                {children}
               </main>
             </div>
-            <Navbar /> {/* Display Navbar at the bottom of every page */}
           </ThemeProvider>
+          <Navbar />
         </AuthProvider>
       </body>
     </html>

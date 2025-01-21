@@ -1,15 +1,20 @@
 // src/app/(public)/layout.tsx
+"use client"; // This marks the component as a client component
 
-export const metadata = { title: "Public | SnapZoška" };
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
-export default function PublicLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <div>
-      {children} {/* Render public pages */}
-    </div>
-  );
+export default function PublicLayout({ children }: { children: React.ReactNode }) {
+  const { data: session } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (session) {
+      router.push("/");
+    }
+  }, [session, router]);
+
+  return <div>{children}</div>;
 }
+
