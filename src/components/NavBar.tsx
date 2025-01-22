@@ -55,7 +55,7 @@ export default function Navbar() {
         <Avatar>{session?.user?.name?.charAt(0) || "U"}</Avatar>
       ),
     },
-    { label: "Odhlásiť", value: "/auth/odhlasit", icon: <LogoutIcon /> },
+    { label: "Odhlásiť", value: "/auth/odhlasenie", icon: <LogoutIcon /> },
   ];
 
   // Select paths based on user authentication status

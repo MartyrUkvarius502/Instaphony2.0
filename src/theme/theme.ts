@@ -25,8 +25,8 @@ const darkPalette = {
     main: '#f50057', // pink
   },
   background: {
-    default: '#1a1a1a', // slightly lighter than #121212
-    paper: '#2c2c2c', // lighter paper background
+    default: '#1a1a1a', // slightly lighter than #121212 '#1a1a1a'
+    paper: '#2c2c2c', // lighter paper background #2c2c2c'
   },
   text: {
     primary: '#e0e0e0', // light white text (instead of pure white)
