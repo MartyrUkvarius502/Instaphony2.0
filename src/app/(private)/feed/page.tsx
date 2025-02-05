@@ -1,7 +1,7 @@
 // /src/app/(private)/feed/page.tsx
 
-import React from "react";
-import { GetServerSideProps } from "next";
+
+import { getPosts } from "../../actions/post_action";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Card from "@mui/material/Card";
@@ -9,33 +9,10 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Box from "@mui/material/Box";
 
-
-interface Post {
-  imageUrl: string;
-  caption: string;
-  id: string;
-}
-
-interface User {
-  name: string;
-  posts: Post[];
-}
-
-interface Props {
-  userData: User[];
-  error: string | null;
-}
-const Posts = ({ userData, error }: Props) => {
-  if (error) {
-    return (
-      <Container>
-        <Typography variant="h4" gutterBottom>
-          {error}
-        </Typography>
-      </Container>
-    );
-  }
-
+export default async function FeedPage() {
+  // Fetch posts using the getPosts function from actions/post_action.ts
+  const userData = await getPosts();
+  
   return(
     <Container>
       <Typography variant="h4" gutterBottom>
@@ -52,7 +29,7 @@ const Posts = ({ userData, error }: Props) => {
                   component="img"
                   height="140"
                   image={post.imageUrl}
-                  alt={post.caption}
+                  alt={post.caption || "No caption"}
                 />
                 <CardContent>
                   <Typography variant="body2" color="text.secondary">
@@ -67,29 +44,3 @@ const Posts = ({ userData, error }: Props) => {
     </Container>
  );
 };
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  try {
-    const response = await fetch("http://localhost:3000/api/posts"); // Update to the correct API endpoint
-    if (!response.ok) {
-      throw new Error("Failed to fetch posts");
-    }
-    const data = await response.json();
-    return {
-      props: {
-        userData: data, // Pass the fetched data to the page
-        error: null,
-      },
-    };
-  } catch (error) {
-    return {
-      props: {
-        userData: [],
-        error: "Failed to load posts.",
-      },
-    };
-  }
-};
-
-export default Posts;
-

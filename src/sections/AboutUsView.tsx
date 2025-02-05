@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Container, Typography, Box } from "@mui/material";
@@ -12,7 +13,7 @@ const Header = styled(Typography)(({ theme }) => ({
     marginBottom: theme.spacing(4),
   }));
 
-  export default function GDPRView() {
+  export default function AboutUsView() {
     return (
       <Container maxWidth="md" sx={{ marginTop: 4 }}>
         {/* Header */}
@@ -36,7 +37,3 @@ const Header = styled(Typography)(({ theme }) => ({
       </Container>
     );
   }
-
-  
-
-  
