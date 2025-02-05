@@ -3,6 +3,8 @@
 
 import { Container, Typography, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import Link from 'next/link';
+
 
 
 // Custom Header Styling
@@ -33,6 +35,15 @@ const Header = styled(Typography)(({ theme }) => ({
           <Typography variant="body1" paragraph>
             Thank you for being a part of our community. We are excited to have you with us and look forward to growing together!
           </Typography>
+          <Link href="https://www.instagram.com/">
+            <p>Our instagram</p>
+          </Link>
+          <Link href="https://sk-sk.facebook.com/login/?next=https%3A%2F%2Fsk-sk.facebook.com%2F">
+            <p>Our facebook</p>
+          </Link>
+          <Link href="/">
+            <p>Some page</p>
+          </Link>
         </Box>
       </Container>
     );
