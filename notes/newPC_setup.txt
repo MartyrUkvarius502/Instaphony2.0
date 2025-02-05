@@ -1,0 +1,55 @@
+Windows PowerShell terminal:
+wsl –-install
+user name: menopriezvisko
+password:
+
+
+VsCode:
+Wsl
+File -> Auto Save 
+Extensions WSL UBUNTU install: GitHub Pull Requests, GitLens, Prettier - Code formatter
+Terminal -> New terminal
+menopriezvisko@DESKTOP-XYZ:~$
+sudo apt install unzip
+Google: nodejs download -> https://nodejs.org/en/download/package-manager
+...
+node -v
+npm -v
+mkdir dev
+cd dev/
+git clone <link to your repo>
+File -> Open folder -> dev -> <your repo name> -> OK
+menopriezvisko@DESKTOP-XYZ:~/xxx/xxxxxx.git
+git config user.name ""
+git config user.email ""
+git remote -v
+npm install
+urobte zmenu (novy riadok) v niektorej page.tsx: commit, sync
+
+# Git and Github:
+https://www.youtube.com/watch?v=mJ-qvsxPHpY
+
+# Next.js:
+https://www.youtube.com/watch?v=ZjAqacIC_3c&list=PLC3y8-rFHvwjOKd6gdf4QtV1uYNiQnruI
+
+// src/app/(public)/layout.tsx
+"use client"; // This marks the component as a client component
+
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+
+export default function PublicLayout({ children }: { children: React.ReactNode }) {
+  const { data: session } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (session) {
+      router.push("/");
+    }
+  }, [session, router]);
+
+  return <div>{children}</div>;
+}
+
+
