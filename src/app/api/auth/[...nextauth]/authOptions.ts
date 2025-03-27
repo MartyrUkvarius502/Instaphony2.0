@@ -21,11 +21,18 @@ export const authOptions: NextAuthOptions = {
   ],
   
   secret: process.env.NEXTAUTH_SECRET,
+  
   pages: {
     signIn: '/auth/prihlasenie',
     signOut: '/auth/odhlasenie',
   },
   callbacks: {
+    async session({ session, user }) {
+      if (session.user) {
+        session.user.id = user.id;
+      }
+      return session;
+    },
     async redirect({ url, baseUrl }: { url: string; baseUrl: string }) {
       // Redirect to home page after sign-in
       return baseUrl || url; // baseUrl is automatically set from NEXTAUTH_URL in .env

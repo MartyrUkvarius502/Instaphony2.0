@@ -16,6 +16,7 @@
     "@mui/icons-material": "^6.4.1",
     "@mui/material": "^6.1.9",
     "@prisma/client": "^6.2.1",
+    "@vercel/blob": "^0.27.3",
     "dotenv": "^16.4.7",
     "next": "^15.1.5",
     "next-auth": "^4.24.11",
@@ -31,7 +32,7 @@
     "eslint-config-next": "15.0.3",
     "prisma": "^6.2.1",
     "ts-node": "^10.9.2",
-    "tsx": "^4.19.2",
+    "tsx": "^4.19.3",
     "typescript": "^5.7.3"
   },
   "prisma": {
