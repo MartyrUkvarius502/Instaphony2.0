@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import prisma from '../auth/[...nextauth]/prisma';
+import { prisma } from "@/app/api/auth/[...nextauth]/prisma";
 
 
 
