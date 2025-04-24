@@ -9,7 +9,7 @@ export const createComment = async (postId: string, userId: string, text: string
     try {
         const newComment = await prisma.comment.create({
             data: {
-                text,
+                content: text,
                 postId,
                 userId, // You need to pass the userId when calling this function
             },
